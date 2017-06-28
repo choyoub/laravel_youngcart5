@@ -15,6 +15,7 @@ class CreateG5BoardWriteTable extends Migration
     {
         Schema::create('g5_board_write', function(Blueprint $table){
           $table->increments('wr_id');
+          $table->string('bo_table', 20);
           $table->integer('wr_num', 11);
           $table->string('wr_reply', 10);
           $table->integer('wr_parent', 11);
