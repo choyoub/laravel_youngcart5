@@ -13,7 +13,23 @@ class CreateG5ShopItemQaTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('g5_shop_item_qa', function(Blueprint $table){
+          $table->increments('iq_id');
+          $table->string('it_id', 20);
+          $table->string('mb_id', 255);
+          $table->tinyInteger('iq_secret', 4);
+          $table->string('iq_name', 255);
+          $table->string('iq_email', 255);
+          $table->string('iq_hp', 255);
+          $table->string('iq_password', 255);
+          $table->string('iq_subject', 255);
+          $table->text('iq_question');
+          $table->text('iq_answer');
+          $table->dateTime('iq_time');
+          $table->string('iq_ip', 25);
+
+          $table->primary('iq_id');
+        });
     }
 
     /**
@@ -23,6 +39,6 @@ class CreateG5ShopItemQaTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('g5_shop_item_qa');
     }
 }

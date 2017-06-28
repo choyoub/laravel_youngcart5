@@ -13,7 +13,16 @@ class CreateG5ShopOrderDeleteTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('g5_shop_order_delete', function(Blueprint $table){
+          $table->increments('de_id');
+          $table->string('de_key', 255);
+          $table->longtext('de_data');
+          $table->string('mb_id', 20);
+          $table->string('de_ip', 255);
+          $table->dateTime('de_datetime');
+
+          $table->primary('de_id');
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class CreateG5ShopOrderDeleteTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('g5_shop_order_delete');
     }
 }

@@ -13,7 +13,16 @@ class CreateG5ShopWishTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('g5_shop_wish', function(Blueprint $table){
+          $table->increments('wi_id');
+          $table->string('mb_id', 255);
+          $table->string('it_id', 20);
+          $table->dateTime('wi_time');
+          $table->string('wi_ip', 25);
+
+          $table->primary('wi_id');
+          $table->index('mb_id');
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class CreateG5ShopWishTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('g5_shop_wish');
     }
 }

@@ -13,7 +13,13 @@ class CreateG5ShopEventItemTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('g5_shop_event_item', function(Blueprint $table){
+          $table->integer('ev_id', 11);
+          $table->string('it_id', 20);
+
+          $table->primary(['ev_id', 'it_id']);
+          $table->index('it_id');
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class CreateG5ShopEventItemTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('g5_shop_event_item');
     }
 }

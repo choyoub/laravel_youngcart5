@@ -13,7 +13,18 @@ class CreateG5ShopCouponLogTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('g5_shop_coupon_log', function(Blueprint $table){
+          $table->increments('cl_id');
+          $table->string('cp_id', 255);
+          $table->string('mb_id', 255);
+          $table->bigInteger('od_id', 20);
+          $table->integer('cp_price', 11);
+          $table->dateTime('cl_datetime');
+
+          $table->primary('cl_id');
+          $table->index('mb_id');
+          $table->index('od_id');
+        });
     }
 
     /**
@@ -23,6 +34,6 @@ class CreateG5ShopCouponLogTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('g5_shop_coupon_log');
     }
 }

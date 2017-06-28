@@ -13,7 +13,17 @@ class CreateG5ShopItemStocksmsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('g5_shop_item_stocksms', function(Blueprint $table){
+          $table->increments('ss_id');
+          $table->string('it_id', 20);
+          $table->string('ss_hp', 255);
+          $table->tinyInteger('ss_send', 4);
+          $table->dateTime('ss_send_time');
+          $table->dateTime('ss_datetime');
+          $table->string('ss_ip', 25);
+
+          $table->primary('ss_id');
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class CreateG5ShopItemStocksmsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('g5_shop_item_stocksms');
     }
 }

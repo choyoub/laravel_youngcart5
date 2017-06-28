@@ -13,7 +13,17 @@ class CreateG5ShopSendcostTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('g5_shop_sendcost', function(Blueprint $table){
+          $table->increments('sc_id');
+          $table->string('sc_name', 255);
+          $table->string('sc_zip1', 10);
+          $table->string('sc_zip2', 10);
+          $table->integer('sc_price', 11);
+
+          $table->primary('sc_id');
+          $table->index('sc_zip1');
+          $table->index('sc_zip2');
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class CreateG5ShopSendcostTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('g5_shop_sendcost');
     }
 }
