@@ -23,6 +23,6 @@ class CreateG5ShopBannerTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('g5_menu');
     }
 }

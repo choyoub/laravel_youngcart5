@@ -13,7 +13,21 @@ class CreateG5ContentTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('g5_content', function(Blueprint $table){
+          $table->string('co_id', 20);
+          $table->tinyInteger('co_html', 4);
+          $table->string('co_subject', 255);
+          $table->longtext('co_content');
+          $table->longtext('co_mobile_content');
+          $table->string('co_skin', 255);
+          $table->string('co_mobile_skin', 255);
+          $table->tinyInteger('co_tag_filter_use', 4);
+          $table->integer('co_hit', 11);
+          $table->string('co_include_head', 255);
+          $table->string('co_include_tail', 255);
+
+          $table->primary('co_id');
+        });
     }
 
     /**
@@ -23,6 +37,6 @@ class CreateG5ContentTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('g5_content');
     }
 }

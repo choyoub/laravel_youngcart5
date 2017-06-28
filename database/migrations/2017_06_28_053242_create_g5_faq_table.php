@@ -13,7 +13,16 @@ class CreateG5FaqTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('g5_faq', function(Blueprint $table){
+          $table->increments('fa_id');
+          $table->integer('fm_id', 11);
+          $table->text('fa_subject');
+          $table->text('fa_content');
+          $table->integer('fa_order', 11);
+
+          $table->primary('fa_id');
+          $table->index('fm_id');
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class CreateG5FaqTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('g5_faq');
     }
 }

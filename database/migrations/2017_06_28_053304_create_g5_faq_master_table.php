@@ -13,7 +13,17 @@ class CreateG5FaqMasterTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('g5_faq_master', function(Blueprint $table){
+          $table->increments('fm_id');
+          $table->string('fm_subject', 255);
+          $table->text('fm_head_html');
+          $table->text('fm_tail_html');
+          $table->text('fm_mobile_head_html');
+          $table->text('fm_mobile_tail_html');
+          $table->integer('fm_order', 11);
+
+          $table->primary('fm_id');
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class CreateG5FaqMasterTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('g5_faq_master');
     }
 }
