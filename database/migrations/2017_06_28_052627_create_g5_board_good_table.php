@@ -18,7 +18,7 @@ class CreateG5BoardGoodTable extends Migration
           $table->string('bo_table', 20);
           $table->integer('wr_id');
           $table->string('mb_id', 20);
-          $table->string('bg_flag', 255);
+          $table->string('bg_flag', 255)->nullable();
           $table->dateTime('bg_datetime');
 
           $table->unique(['bo_table', 'wr_id', 'mb_id']);

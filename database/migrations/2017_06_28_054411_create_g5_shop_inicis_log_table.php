@@ -15,16 +15,16 @@ class CreateG5ShopInicisLogTable extends Migration
     {
         Schema::create('g5_shop_inicis_log', function(Blueprint $table){
           $table->bigInteger('oid')->unsigned();
-          $table->string('P_TID', 255);
-          $table->string('P_MID', 255);
-          $table->string('P_AUTH_DT', 255);
-          $table->string('P_STATUS', 255);
-          $table->string('P_TYPE', 255);
-          $table->string('P_OID', 255);
-          $table->string('P_FN_NM', 255);
-          $table->string('P_AUTH_NO', 255);
-          $table->integer('P_AMT');
-          $table->string('P_RMESG1', 255);
+          $table->string('p_tid', 255);
+          $table->string('p_mid', 255);
+          $table->string('p_auth_dt', 255)->nullable();
+          $table->string('p_status', 255)->nullable();
+          $table->string('p_type', 255)->nullable();
+          $table->string('p_oid', 255)->nullable();
+          $table->string('p_fn_nm', 255)->nullable();
+          $table->string('p_auth_no', 255)->nullable();
+          $table->integer('p_amt')->nullable();
+          $table->string('p_rmesg1', 255)->nullable();
 
           $table->primary('oid');
         });

@@ -17,11 +17,11 @@ class CreateG5MenuTable extends Migration
           $table->increments('me_id');
           $table->string('me_code', 255);
           $table->string('me_name', 255);
-          $table->string('me_link', 255);
-          $table->string('me_target', 255);
-          $table->integer('me_order');
-          $table->tinyInteger('me_use');
-          $table->tinyInteger('me_mobile_use');
+          $table->string('me_link', 255)->nullable();
+          $table->string('me_target', 255)->nullable();
+          $table->integer('me_order')->default(0);
+          $table->tinyInteger('me_use')->nullable();
+          $table->tinyInteger('me_mobile_use')->nullable();
 
         });
     }

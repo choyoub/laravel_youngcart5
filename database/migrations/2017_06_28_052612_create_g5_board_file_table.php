@@ -20,12 +20,12 @@ class CreateG5BoardFileTable extends Migration
           $table->string('bf_source', 255);
           $table->string('bf_file', 255);
           $table->integer('bf_download');
-          $table->text('bf_content');
-          $table->integer('bf_filesize');
-          $table->integer('bf_width');
-          $table->smallInteger('bf_height');
-          $table->tinyInteger('bf_type');
-          $table->dateTime('bf_datetime');
+          $table->text('bf_content')->nullable();
+          $table->integer('bf_filesize')->nullable();
+          $table->integer('bf_width')->nullable();
+          $table->smallInteger('bf_height')->nullable();
+          $table->tinyInteger('bf_type')->nullable();
+          $table->dateTime('bf_datetime')->nullable();
 
           $table->primary(['bo_table', 'wr_id','bf_no']);
         });

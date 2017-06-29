@@ -18,8 +18,8 @@ class CreateG5ShopOrderDeleteTable extends Migration
           $table->string('de_key', 255);
           $table->longtext('de_data');
           $table->string('mb_id', 20);
-          $table->string('de_ip', 255);
-          $table->dateTime('de_datetime');
+          $table->string('de_ip', 255)->nullable();
+          $table->dateTime('de_datetime')->nullable();
 
         });
     }

@@ -16,11 +16,11 @@ class CreateG5CertHistoryTable extends Migration
         Schema::create('g5_cert_history', function(Blueprint $table){
           $table->increments('cr_id');
           $table->string('mb_id', 20);
-          $table->string('cr_company', 255);
-          $table->string('cr_method', 255);
-          $table->string('cr_ip', 255);
-          $table->date('cr_date');
-          $table->time('cr_time');
+          $table->string('cr_company', 255)->nullable();
+          $table->string('cr_method', 255)->nullable();
+          $table->string('cr_ip', 255)->nullable();
+          $table->date('cr_date')->nullable();
+          $table->time('cr_time')->nullable();
 
           $table->index('mb_id');
         });

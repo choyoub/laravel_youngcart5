@@ -17,8 +17,8 @@ class CreateG5ShopWishTable extends Migration
           $table->increments('wi_id');
           $table->string('mb_id', 255);
           $table->string('it_id', 20);
-          $table->dateTime('wi_time');
-          $table->string('wi_ip', 25);
+          $table->dateTime('wi_time')->nullable();
+          $table->string('wi_ip', 25)->nullable();
 
           $table->index('mb_id');
         });

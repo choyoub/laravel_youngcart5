@@ -17,8 +17,8 @@ class CreateG5ScrapTable extends Migration
           $table->increments('ms_id');
           $table->string('mb_id', 20);
           $table->string('bo_table', 20);
-          $table->string('wr_id', 15);
-          $table->dateTime('ms_datetime');
+          $table->string('wr_id', 15)->nullable();
+          $table->dateTime('ms_datetime')->nullable();
 
           $table->index('mb_id');
         });

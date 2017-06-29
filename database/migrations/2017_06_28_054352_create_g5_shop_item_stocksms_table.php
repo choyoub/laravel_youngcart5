@@ -16,11 +16,11 @@ class CreateG5ShopItemStocksmsTable extends Migration
         Schema::create('g5_shop_item_stocksms', function(Blueprint $table){
           $table->increments('ss_id');
           $table->string('it_id', 20);
-          $table->string('ss_hp', 255);
-          $table->tinyInteger('ss_send');
-          $table->dateTime('ss_send_time');
-          $table->dateTime('ss_datetime');
-          $table->string('ss_ip', 25);
+          $table->string('ss_hp', 255)->nullable();
+          $table->tinyInteger('ss_send')->nullable();
+          $table->dateTime('ss_send_time')->nullable();
+          $table->dateTime('ss_datetime')->nullable();
+          $table->string('ss_ip', 25)->nullable();
 
         });
     }

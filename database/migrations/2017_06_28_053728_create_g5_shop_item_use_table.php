@@ -17,14 +17,14 @@ class CreateG5ShopItemUseTable extends Migration
           $table->increments('is_id');
           $table->string('it_id', 20);
           $table->string('mb_id', 255);
-          $table->string('is_name', 255);
-          $table->string('is_password', 255);
-          $table->tinyInteger('is_score');
-          $table->string('is_subject', 255);
-          $table->text('is_content');
-          $table->dateTime('is_time');
-          $table->string('is_ip', 25);
-          $table->tinyInteger('is_confirm');
+          $table->string('is_name', 255)->nullable();
+          $table->string('is_password', 255)->nullable();
+          $table->tinyInteger('is_score')->nullable();
+          $table->string('is_subject', 255)->nullable();
+          $table->text('is_content')->nullable();
+          $table->dateTime('is_time')->nullable();
+          $table->string('is_ip', 25)->nullable();
+          $table->tinyInteger('is_confirm')->nullable();
 
           $table->index('it_id');
         });

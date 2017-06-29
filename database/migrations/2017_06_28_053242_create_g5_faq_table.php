@@ -16,9 +16,9 @@ class CreateG5FaqTable extends Migration
         Schema::create('g5_faq', function(Blueprint $table){
           $table->increments('fa_id');
           $table->integer('fm_id');
-          $table->text('fa_subject');
-          $table->text('fa_content');
-          $table->integer('fa_order');
+          $table->text('fa_subject')->nullable();
+          $table->text('fa_content')->nullable();
+          $table->integer('fa_order')->default(0);
 
           $table->index('fm_id');
         });

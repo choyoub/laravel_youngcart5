@@ -17,16 +17,16 @@ class CreateG5NewWinTable extends Migration
           $table->increments('nw_id');
           $table->string('nw_division', 10)->default('both');
           $table->string('nw_device', 10)->default('both');
-          $table->dateTime('nw_begin_time');
-          $table->dateTime('nw_end_time');
-          $table->integer('nw_disable_hours');
-          $table->integer('nw_left');
-          $table->integer('nw_top');
-          $table->integer('nw_height');
-          $table->integer('nw_width');
-          $table->text('nw_subject');
-          $table->text('nw_content');
-          $table->tinyInteger('nw_content_html');
+          $table->dateTime('nw_begin_time')->nullable();
+          $table->dateTime('nw_end_time')->nullable();
+          $table->integer('nw_disable_hours')->nullable();
+          $table->integer('nw_left')->nullable();
+          $table->integer('nw_top')->nullable();
+          $table->integer('nw_height')->nullable();
+          $table->integer('nw_width')->nullable();
+          $table->text('nw_subject')->nullable();
+          $table->text('nw_content')->nullable();
+          $table->tinyInteger('nw_content_html')->nullable();
 
         });
     }

@@ -16,17 +16,17 @@ class CreateG5ShopOrderAddressTable extends Migration
         Schema::create('g5_shop_order_address', function(Blueprint $table){
           $table->increments('ad_id');
           $table->string('mb_id', 255);
-          $table->string('ad_subject', 255);
-          $table->tinyInteger('ad_default');
-          $table->string('ad_name', 255);
-          $table->string('ad_tel', 255);
-          $table->string('ad_hp', 255);
-          $table->char('ad_zip1', 3);
-          $table->char('ad_zip2', 3);
-          $table->string('ad_addr1', 255);
-          $table->string('ad_addr2', 255);
-          $table->string('ad_addr3', 255);
-          $table->string('ad_jibeon', 255);
+          $table->string('ad_subject', 255)->nullable();
+          $table->tinyInteger('ad_default')->nullable();
+          $table->string('ad_name', 255)->nullable();
+          $table->string('ad_tel', 255)->nullable();
+          $table->string('ad_hp', 255)->nullable();
+          $table->char('ad_zip1', 3)->nullable();
+          $table->char('ad_zip2', 3)->nullable();
+          $table->string('ad_addr1', 255)->nullable();
+          $table->string('ad_addr2', 255)->nullable();
+          $table->string('ad_addr3', 255)->nullable();
+          $table->string('ad_jibeon', 255)->nullable();
 
           $table->index('mb_id');
         });

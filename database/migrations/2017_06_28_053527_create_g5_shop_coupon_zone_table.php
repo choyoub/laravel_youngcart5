@@ -17,20 +17,20 @@ class CreateG5ShopCouponZoneTable extends Migration
           $table->increments('cz_id');
           $table->tinyInteger('cz_type');
           $table->string('cz_subject', 255);
-          $table->date('cz_start');
-          $table->date('cz_end');
-          $table->string('cz_file', 255);
-          $table->integer('cz_period');
-          $table->integer('cz_point');
-          $table->tinyInteger('cp_method');
-          $table->string('cp_target', 255);
-          $table->integer('cp_price');
-          $table->tinyInteger('cp_type');
-          $table->integer('cp_trunc');
-          $table->integer('cp_minimum');
-          $table->integer('cp_maximum');
-          $table->integer('cz_download');
-          $table->dateTime('cz_datetime');
+          $table->date('cz_start')->nullable();
+          $table->date('cz_end')->nullable();
+          $table->string('cz_file', 255)->nullable();
+          $table->integer('cz_period')->nullable();
+          $table->integer('cz_point')->nullable();
+          $table->tinyInteger('cp_method')->nullable();
+          $table->string('cp_target', 255)->nullable();
+          $table->integer('cp_price')->nullable();
+          $table->tinyInteger('cp_type')->nullable();
+          $table->integer('cp_trunc')->nullable();
+          $table->integer('cp_minimum')->nullable();
+          $table->integer('cp_maximum')->nullable();
+          $table->integer('cz_download')->nullable();
+          $table->dateTime('cz_datetime')->nullable();
 
         });
     }

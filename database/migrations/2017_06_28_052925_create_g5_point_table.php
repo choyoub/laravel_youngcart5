@@ -16,13 +16,13 @@ class CreateG5PointTable extends Migration
         Schema::create('g5_point', function(Blueprint $table){
           $table->increments('po_id');
           $table->string('mb_id', 20);
-          $table->dateTime('po_datetime');
-          $table->string('po_content', 255);
-          $table->integer('po_point');
-          $table->integer('po_use_point');
-          $table->tinyInteger('po_expired');
-          $table->date('po_expire_date');
-          $table->integer('po_mb_point');
+          $table->dateTime('po_datetime')->nullable();
+          $table->string('po_content', 255)->nullable();
+          $table->integer('po_point')->nullable();
+          $table->integer('po_use_point')->nullable();
+          $table->tinyInteger('po_expired')->nullable();
+          $table->date('po_expire_date')->nullable();
+          $table->integer('po_mb_point')->nullable();
           $table->string('po_rel_table', 20);
           $table->string('po_rel_id', 20);
           $table->string('po_rel_action', 255);

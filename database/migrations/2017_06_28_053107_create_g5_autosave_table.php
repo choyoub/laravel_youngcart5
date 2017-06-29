@@ -17,9 +17,9 @@ class CreateG5AutosaveTable extends Migration
           $table->increments('as_id');
           $table->string('mb_id', 20);
           $table->bigInteger('as_uid')->unsigned();
-          $table->string('as_subject', 255);
-          $table->text('as_content');
-          $table->dateTime('as_datetime');
+          $table->string('as_subject', 255)->nullable();
+          $table->text('as_content')->nullable();
+          $table->dateTime('as_datetime')->nullable();
 
           $table->unique('as_uid');
           $table->index('mb_id');

@@ -17,7 +17,7 @@ class CreateG5GroupMemberTable extends Migration
           $table->increments('gm_id');
           $table->string('gr_id', 255);
           $table->string('mb_id', 20);
-          $table->dateTime('gm_datetime');
+          $table->dateTime('gm_datetime')->nullable();
 
           $table->index('gr_id');
           $table->index('mb_id');

@@ -15,17 +15,17 @@ class CreateG5ShopBannerTable extends Migration
     {
         Schema::create('g5_shop_banner', function(Blueprint $table){
           $table->increments('bn_id');
-          $table->string('bn_alt', 255);
-          $table->string('bn_url', 255);
-          $table->string('bn_device', 10);
-          $table->string('bn_position', 255);
-          $table->tinyInteger('bn_border');
-          $table->tinyInteger('bn_new_win');
-          $table->dateTime('bn_begin_time');
-          $table->dateTime('bn_end_time');
-          $table->dateTime('bn_time');
-          $table->integer('bn_hit');
-          $table->integer('bn_order');
+          $table->string('bn_alt', 255)->nullable();
+          $table->string('bn_url', 255)->nullable();
+          $table->string('bn_device', 10)->nullable();
+          $table->string('bn_position', 255)->nullable();
+          $table->tinyInteger('bn_border')->nullable();
+          $table->tinyInteger('bn_new_win')->nullable();
+          $table->dateTime('bn_begin_time')->nullable();
+          $table->dateTime('bn_end_time')->nullable();
+          $table->dateTime('bn_time')->nullable();
+          $table->integer('bn_hit')->nullable();
+          $table->integer('bn_order')->default(0);
 
         });
     }

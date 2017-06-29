@@ -17,9 +17,9 @@ class CreateG5MailTable extends Migration
           $table->increments('ma_id');
           $table->string('ma_subject', 255);
           $table->mediumText('ma_content');
-          $table->dateTime('ma_time');
-          $table->string('ma_ip', 255);
-          $table->text('ma_last_option');
+          $table->dateTime('ma_time')->nullable();
+          $table->string('ma_ip', 255)->nullable();
+          $table->text('ma_last_option')->nullable();
 
         });
     }

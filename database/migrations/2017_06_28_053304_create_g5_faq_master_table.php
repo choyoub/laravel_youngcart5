@@ -16,11 +16,11 @@ class CreateG5FaqMasterTable extends Migration
         Schema::create('g5_faq_master', function(Blueprint $table){
           $table->increments('fm_id');
           $table->string('fm_subject', 255);
-          $table->text('fm_head_html');
-          $table->text('fm_tail_html');
-          $table->text('fm_mobile_head_html');
-          $table->text('fm_mobile_tail_html');
-          $table->integer('fm_order');
+          $table->text('fm_head_html')->nullable();
+          $table->text('fm_tail_html')->nullable();
+          $table->text('fm_mobile_head_html')->nullable();
+          $table->text('fm_mobile_tail_html')->nullable();
+          $table->integer('fm_order')->default(0);
 
         });
     }

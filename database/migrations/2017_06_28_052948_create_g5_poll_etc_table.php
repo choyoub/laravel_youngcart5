@@ -17,9 +17,9 @@ class CreateG5PollEtcTable extends Migration
           $table->integer('pc_id');
           $table->integer('po_id');
           $table->string('mb_id', 20);
-          $table->string('pc_name', 255);
-          $table->string('pc_idea', 255);
-          $table->dateTime('pc_datetime');
+          $table->string('pc_name', 255)->nullable();
+          $table->string('pc_idea', 255)->nullable();
+          $table->dateTime('pc_datetime')->nullable();
 
           $table->primary('pc_id');
         });

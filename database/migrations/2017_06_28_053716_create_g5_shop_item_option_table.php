@@ -18,10 +18,10 @@ class CreateG5ShopItemOptionTable extends Migration
           $table->string('io_id', 255);
           $table->tinyInteger('io_type');
           $table->string('it_id', 20);
-          $table->integer('io_price');
-          $table->integer('io_stock_qty');
-          $table->integer('io_noti_qty');
-          $table->tinyInteger('io_use');
+          $table->integer('io_price')->nullable();
+          $table->integer('io_stock_qty')->nullable();
+          $table->integer('io_noti_qty')->nullable();
+          $table->tinyInteger('io_use')->nullable();
 
           $table->index('io_id');
           $table->index('it_id');

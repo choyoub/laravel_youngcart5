@@ -17,9 +17,9 @@ class CreateG5ShopOrderDataTable extends Migration
           $table->bigInteger('od_id')->unsigned();
           $table->bigInteger('cart_id')->unsigned();
           $table->string('mb_id', 20);
-          $table->string('dt_pg', 255);
-          $table->text('dt_data');
-          $table->dateTime('dt_time');
+          $table->string('dt_pg', 255)->nullable();
+          $table->text('dt_data')->nullable();
+          $table->dateTime('dt_time')->nullable();
 
           $table->index('od_id');
         });

@@ -17,9 +17,9 @@ class CreateG5VisitTable extends Migration
           $table->integer('vi_id');
           $table->string('vi_ip', 255);
           $table->date('vi_date');
-          $table->time('vi_time');
-          $table->text('vi_referer');
-          $table->string('vi_agent', 255);
+          $table->time('vi_time')->nullable();
+          $table->text('vi_referer')->nullable();
+          $table->string('vi_agent', 255)->nullable();
 
           $table->primary('vi_id');
           $table->unique(['vi_ip', 'vi_date']);

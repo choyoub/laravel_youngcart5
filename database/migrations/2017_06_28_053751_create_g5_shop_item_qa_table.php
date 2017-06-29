@@ -17,16 +17,16 @@ class CreateG5ShopItemQaTable extends Migration
           $table->increments('iq_id');
           $table->string('it_id', 20);
           $table->string('mb_id', 255);
-          $table->tinyInteger('iq_secret');
-          $table->string('iq_name', 255);
-          $table->string('iq_email', 255);
-          $table->string('iq_hp', 255);
-          $table->string('iq_password', 255);
-          $table->string('iq_subject', 255);
-          $table->text('iq_question');
-          $table->text('iq_answer');
-          $table->dateTime('iq_time');
-          $table->string('iq_ip', 25);
+          $table->tinyInteger('iq_secret')->nullable();
+          $table->string('iq_name', 255)->nullable();
+          $table->string('iq_email', 255)->nullable();
+          $table->string('iq_hp', 255)->nullable();
+          $table->string('iq_password', 255)->nullable();
+          $table->string('iq_subject', 255)->nullable();
+          $table->text('iq_question')->nullable();
+          $table->text('iq_answer')->nullable();
+          $table->dateTime('iq_time')->nullable();
+          $table->string('iq_ip', 25)->nullable();
 
         });
     }

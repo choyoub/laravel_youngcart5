@@ -18,8 +18,8 @@ class CreateG5ShopCouponLogTable extends Migration
           $table->string('cp_id', 255);
           $table->string('mb_id', 255);
           $table->bigInteger('od_id');
-          $table->integer('cp_price');
-          $table->dateTime('cl_datetime');
+          $table->integer('cp_price')->nullable();
+          $table->dateTime('cl_datetime')->nullable();
 
           $table->index('mb_id');
           $table->index('od_id');
