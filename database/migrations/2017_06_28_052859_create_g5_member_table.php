@@ -15,12 +15,12 @@ class CreateG5MemberTable extends Migration
     {
         Schema::create('g5_member', function(Blueprint $table){
           $table->increments('mb_no');
-          $table->string('username', 20);
+          $table->string('mb_id', 20);
           $table->string('password', 255);
           $table->string('mb_name', 255);
           $table->string('mb_nick', 255)->nullable();
           $table->date('mb_nick_date')->nullable();
-          $table->string('mb_email', 255)->nullable();
+          $table->string('email', 255)->nullable();
           $table->string('mb_homepage', 255)->nullable();
           $table->tinyInteger('mb_level')->nullable();
           $table->char('mb_sex', 1)->nullable();
@@ -68,7 +68,7 @@ class CreateG5MemberTable extends Migration
           $table->rememberToken();
           $table->timestamps();
 
-          $table->unique('username');
+          $table->unique('mb_id');
           $table->index('mb_today_login');
           $table->index('mb_datetime');
         });

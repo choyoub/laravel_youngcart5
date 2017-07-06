@@ -16,11 +16,11 @@ class G5MemberTableSeeder extends Seeder
         $remoteAddr = request()->server('REMOTE_ADDR');
 
         DB::table('g5_member')->insert([
-          'username' => 'admin',
+          'mb_id' => 'admin',
           'password' => $password,
           'mb_name' => '관리자',
           'mb_nick' => '관리자',
-          'mb_email' => 'admin@localhost',
+          'email' => 'netice80@naver.com',
           'mb_level' => '10',
           'mb_mailling' => '1',
           'mb_open' => '1',

@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(G5ContentTableSeeder::class);
         $this->call(G5QaConfigTableSeeder::class);
         $this->call(G5BoardTableSeeder::class);
+        $this->call(G5RolesTableSeeder::class);
     }
 }
