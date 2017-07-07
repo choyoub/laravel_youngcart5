@@ -5,11 +5,9 @@
 [![Build Status][ico-travis]][link-travis]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-__For Laravel 5.x, check [version 1.11](https://github.com/choyoub/laravel_youngcart5/tree/1.11)__
-
 ### License
 
-The Laravel IDE Helper Generator is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The Laravel for Youngcart5 is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 
 [ico-version]: https://img.shields.io/packagist/v/choyoub/laravel_youngcart5.svg?style=flat-square
